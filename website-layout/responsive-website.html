@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive-Website</title>
+    <style>
+        /* css relative unit */
+        h1{
+            font-size: 10vw;
+        }
+        /* <!-- Responsive Image (Fluid Image) --> */
+        .tiger img{
+            width: 100%;
+        }
+        /* Responsive body max-width and margin auto */
+        body{
+            max-width: 1240px;
+            margin: 0 auto;
+            border: 2px solid coral;
+        }
+        /* Responsive Split scree using flex */
+        .container-two{
+            display: flex;
+        }
+        .container-two .split{
+            width: 50%;
+        }
+        .split img{
+            width: 100%;
+        }
+        @media screen and (max-width: 576px) {
+            .container-two{
+                flex-direction: column-reverse;
+                gap: 10px;
+            }
+            .container-two .split{
+            width: 100%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>This is responsive website</h1>
+    </section>
+    <!-- Responsive Image (Fluid Image) -->
+    <section class="tiger">
+        <h3>Tiger</h3>
+        <img src="images/tiger-1.jpg" alt="Tiger">
+    </section>
+    <section>
+        <h2>Two parts</h2>
+        <div class="container-two">
+            <div class="split">
+                <img src="images/deer-1.jpg" alt="deer">
+            </div>
+            <div class="split">
+                <img src="images/tiger-1.jpg" alt="tiger">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
